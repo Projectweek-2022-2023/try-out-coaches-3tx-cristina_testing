@@ -27,9 +27,9 @@ public class AddAnimalTest {
 	public void given_allFieldsFilledInCorrectly_when_animalAdded_then_animalIsAdded() {
 		// GIVEN STEP = context
 		AddPage addPage = PageFactory.initElements(driver, AddPage.class);
-		addPage.setFirstName("Blub");
-		addPage.setLastName("Vis");
-		addPage.setEmail("3");
+		addPage.setName("Blub");
+		addPage.setType("Vis");
+		addPage.setFood("3");
 
 		// WHEN STEP = action
 		addPage.add();
@@ -44,9 +44,9 @@ public class AddAnimalTest {
 	public void given_nameNotFilledIn_when_animalAdded_then_errorMessageGivenForNameAndOtherFieldsValueAreKept(){
 		// GIVEN STEP = context
 		AddPage addPage = PageFactory.initElements(driver, AddPage.class);
-		addPage.setFirstName("");
-		addPage.setLastName("Vis");
-		addPage.setEmail("3");
+		addPage.setName("");
+		addPage.setType("Vis");
+		addPage.setFood("3");
 
 		// WHEN STEP = action
 		addPage.add();

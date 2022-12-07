@@ -24,19 +24,19 @@ public class AddPage extends Page {
         this.driver.get(Config.BASE_URL+"add.jsp");
     }
 
-    public void setFirstName(String firstName) {
+    public void setName(String name) {
         nameField.clear();
-        nameField.sendKeys(firstName);
+        nameField.sendKeys(name);
     }
 
-    public void setLastName(String lastName) {
+    public void setType(String type) {
         typeField.clear();
-        typeField.sendKeys(lastName);
+        typeField.sendKeys(type);
     }
 
-    public void setEmail(String email) {
+    public void setFood(String food) {
         foodField.clear();
-        foodField.sendKeys(email);
+        foodField.sendKeys(food);
     }
 
     public void add() {

@@ -56,7 +56,7 @@ public class Animal {
     }
 
     public void setFood(int food) {
-        if (food < 0) {
+        if (food <= 0) {
             throw new IllegalArgumentException("Geen geldige hoeveelheid voor voedsel");
         }
         this.food = food;

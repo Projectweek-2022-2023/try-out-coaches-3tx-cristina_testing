@@ -3,7 +3,6 @@ package ui.view;
 import org.openqa.selenium.WebDriver;
 
 public abstract class Page {
-
     WebDriver driver;
     String path = Config.BASE_URL;
 
@@ -18,5 +17,4 @@ public abstract class Page {
     public String getTitle () {
         return driver.getTitle();
     }
-
 }
