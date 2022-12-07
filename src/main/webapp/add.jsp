@@ -27,7 +27,7 @@
         </c:if>
         <h2>Voeg je huisdier toe</h2>
 
-        <form method="POST" action="Controller?command=Add">
+        <form method="POST" action="Controller?command=Add" novalidate>
 
             <p class="form-group ${nameClass}">
                 <label class="control-label" for="name">Naam:</label>

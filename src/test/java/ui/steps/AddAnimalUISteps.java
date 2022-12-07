@@ -37,8 +37,7 @@ public class AddAnimalUISteps {
 
     @Then("an error message should be shown")
     public void an_error_message_should_be_shown() {
-
-
+        assertTrue(addPage.hasErrorMessage("Geen geldige hoeveelheid voor voedsel"));
     }
 
     @After
