@@ -1,19 +1,27 @@
-Feature: Add animal
+Feature: Add Animal
+
   As a user
-  I want to add an animal
-  So that I can keep track of the details of the animal
+  I want to register the data of a new animal
+  So that I may get an update on it's name, kind and behaviour
 
   # Personas
   # Brecht - user
 
   @UI
-  Rule: Food must be greater than 0
-      Scenario: The animal is added with a food equal to 1
-        Given Brecht is at the add animal page
-        When Brecht adds animal with food equal to 1
-        Then The animal should be added to the overview of animals
+  Rule: Food must be greater than zero units
 
-      Scenario: The animal is added with a food equal to 0
-        Given Brecht is at the add animal page
-        When Brecht adds animal with food equal to 0
-        Then The animal should not be added to the overview of animals
+  Scenario: The animal is added when the food it consumes is greater than zero
+    Given Brecht has chosen to add a new animal
+    When Brecht registers 9 as the amount of food
+    Then the animal should be added to the overview of animals
+
+  Scenario Outline: An error messages is shown if the food the animal consumes is equal to or less than zero
+    Given Brecht has chosen to add a new animal
+    When Brecht registers <food> as the amount of food
+    Then an error message should be shown
+
+    Examples:
+      | food |
+      | 0    |
+      | -5   |
+

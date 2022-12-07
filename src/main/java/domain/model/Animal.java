@@ -45,7 +45,7 @@ public class Animal {
     }
 
     public void setType(String type) {
-        if (type.isBlank()) {
+        if (type == null || type.isBlank()) {
             throw new IllegalArgumentException("Geen geldige soort");
         }
         this.type = type;

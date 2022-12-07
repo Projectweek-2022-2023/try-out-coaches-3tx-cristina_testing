@@ -31,7 +31,7 @@ public class AnimalServiceDBSQL implements AnimalService {
     }
 
     @Override
-    public Animal findAnimalWithName(String naam) {
+    public Animal findAnimalWithName(String name) {
         return null;
     }
 
@@ -56,15 +56,10 @@ public class AnimalServiceDBSQL implements AnimalService {
     }
 
     /**
-     * Check the connection and reconnect when necessery
+     * Check the connection and reconnect when necessary
      * @return the connection with the db, if there is one
      */
     private Connection getConnection() {
         return this.connection;
     }
-
-
-
-
-
 }

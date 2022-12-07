@@ -10,4 +10,4 @@ import org.junit.runner.RunWith;
         glue={"ui.steps"},
         tags="@UI",
         plugin={"json:target/ui-test.json"})
-public class CucumberTests {}
+public class CucumberUITests {}

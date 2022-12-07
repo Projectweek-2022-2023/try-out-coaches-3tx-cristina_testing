@@ -62,9 +62,9 @@ public class Add extends RequestHandler {
 
     private void setFood(Animal animal, HttpServletRequest request, ArrayList<String> errors) {
         int food;
-        if(request.getParameter("food").isBlank()){
+        if(request.getParameter("food").isBlank()) {
             food = -1;
-        }else{
+        } else {
             food = Integer.parseInt(request.getParameter("food"));
         }
         try {
